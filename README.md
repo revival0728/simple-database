@@ -32,13 +32,13 @@ Make a post request to `~/read/`
 Set `req.body` as following
 ```json
 {
-    readByIndex: the_index_of_data (number)
+    "readByIndex": "the_index_of_data (number)"
 }
 ```
 returns as the following format
 ```json
 {
-    data: [singe_data]
+    "data": "[singe_data]"
 }
 ```
 
@@ -46,13 +46,13 @@ returns as the following format
 Set `req.body` as following
 ```json
 {
-    readByAttrs: the_attributes_of_data (string)
+    "readByAttrs": "the_attributes_of_data (string)"
 }
 ```
 returns as the following format
 ```json
 {
-    data: [...]
+    "data": "[...]"
 }
 ```
 
@@ -60,15 +60,15 @@ returns as the following format
 Make a post request to `~/write/` and set `req.body` as following
 ```json
 {
-    data: {
-        ...
+    "data": {
+        "..."
     }
 }
 ```
 returns as the following format
 ```json
 {
-    success: true
+    "success": true
 }
 ```
 
@@ -76,13 +76,13 @@ returns as the following format
 Make a post request to `~/init/` and set `req.body` as following
 ```json
 {
-    admin_password: the_auto_generated_random_admin_password
+    "admin_password": "the_auto_generated_random_admin_password"
 }
 ```
 returns as the following format
 ```json
 {
-    success: true
+    "success": "true"
 }
 ```
 
@@ -90,7 +90,7 @@ returns as the following format
 If the request failed, the api will return as the following format
 ```json
 {
-    error: "some messages"
+    "error": "some messages"
 }
 ```
 
