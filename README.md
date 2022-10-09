@@ -82,7 +82,7 @@ Make a post request to `~/init/` and set `req.body` as following
 returns as the following format
 ```json
 {
-    "success": "true"
+    "success": true
 }
 ```
 
