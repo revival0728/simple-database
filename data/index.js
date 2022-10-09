@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const clear_database = {
     data: [],
-    attrs: {}
+    attrs_list: {}
 }
 
 if(!fs.existsSync('./data/database.json')) {
