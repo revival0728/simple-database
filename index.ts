@@ -3,7 +3,7 @@ const express = require('express')
 const fs = require('fs')
 const sr = require('simple-random')
 const app = express()
-const port = 80
+const port = process.env.PORT
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
