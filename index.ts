@@ -15,7 +15,7 @@ var block_all_requests = false
 
 
 // database variables
-var database = {}
+var database: object
 const DATABASE_ESSENTAIL_KEY = ['data', 'attrs_list']
 var admin_password = sr()
 var now_admin_try = 0
