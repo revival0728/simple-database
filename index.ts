@@ -3,7 +3,7 @@ const express = require('express')
 const fs = require('fs')
 const sr = require('simple-random')
 const app = express()
-const port = 80
+const port = 3001
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -15,10 +15,7 @@ var block_all_requests = false
 
 
 // database variables
-var database = {
-        data: [],
-        attrs_list: {}
-    }
+var database = JSON.parse(fs.readFileSync('./data/database.json').toString())
 const DATABASE_ESSENTAIL_KEY = ['data', 'attrs_list']
 var admin_password = sr()
 var now_admin_try = 0
@@ -38,8 +35,8 @@ const checkDataBaseHealth = (): boolean => {
 
 const initDatabase = (): void => {
     database = {
-        data: [],
-        attrs_list: {}
+        'data': [],
+        'attrs_list': {}
     }
 }
 
@@ -189,7 +186,7 @@ app.post('/init', (req: Request, res: Response) => {
 
 
 // Start Express App (Database)
-initDatabase()
+setBackupTimer()
 app.listen(port, () => {
     if(!checkDataBaseHealth()) {
         console.log('Something went wrong in database')
