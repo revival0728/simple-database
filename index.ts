@@ -15,7 +15,7 @@ var block_all_requests = false
 
 
 // database variables
-var database = JSON.parse(fs.readFileSync('./data/database.json').toString())
+var database = {}
 const DATABASE_ESSENTAIL_KEY = ['data', 'attrs_list']
 var admin_password = sr()
 var now_admin_try = 0
@@ -186,7 +186,7 @@ app.post('/init', (req: Request, res: Response) => {
 
 
 // Start Express App (Database)
-setBackupTimer()
+initDatabase()
 app.listen(port, () => {
     if(!checkDataBaseHealth()) {
         console.log('Something went wrong in database')
