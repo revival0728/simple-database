@@ -15,7 +15,7 @@ var block_all_requests = false
 
 
 // database variables
-var database = {
+var database: {[index: string]:any} = {
         data: [],
         attrs_list: {}
     }
