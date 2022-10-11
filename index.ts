@@ -186,7 +186,6 @@ app.post('/init', (req: Request, res: Response) => {
 
 
 // Start Express App (Database)
-setBackupTimer()
 app.listen(port, () => {
     if(!checkDataBaseHealth()) {
         console.log('Something went wrong in database')
