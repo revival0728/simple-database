@@ -16,8 +16,8 @@ var block_all_requests = false
 
 // database variables
 var database = {
-        'data': [],
-        'attrs_list': {}
+        data: [],
+        attrs_list: {}
     }
 const DATABASE_ESSENTAIL_KEY = ['data', 'attrs_list']
 var admin_password = sr()
@@ -38,8 +38,8 @@ const checkDataBaseHealth = (): boolean => {
 
 const initDatabase = (): void => {
     database = {
-        'data': [],
-        'attrs_list': {}
+        data: [],
+        attrs_list: {}
     }
 }
 
